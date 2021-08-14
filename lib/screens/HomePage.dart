@@ -1,4 +1,6 @@
+import 'package:e_com/Widgets/AdBaner.dart';
 import 'package:e_com/Widgets/HomeAppBar.dart';
+import 'package:e_com/Widgets/ProductHomeGrid.dart';
 import 'package:e_com/Widgets/SearchBar.dart';
 import 'package:flutter/material.dart';
 
@@ -15,20 +17,23 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     Size screenSize = MediaQuery.of(context).size;
     return Scaffold(
+      backgroundColor: Colors.grey[100],
       appBar: HomeAppBar(),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           children: <Widget>[
             SearchBar(screenSize),
-            SingleChildScrollView(),
-            Container(
-              height: screenSize.height * 0.25,
-              width: screenSize.width,
-              color: Colors.grey[100],
-              child: Image.network(
-                'https://www.cellcity.co.bw/sites/default/files/styles/main_image/public/2021-02/Iphone%2012%20website%20Banners%202020-2%20%282%29.jpg?itok=SM9AD0EV',
-                fit: BoxFit.fill,
+            Expanded(
+              child: SingleChildScrollView(
+                child: Column(
+                  children: <Widget>[
+                    AdBaner(screenSize),
+                    ProductHomeGrid(screenSize: screenSize),
+                    AdBaner2(screenSize),
+                    ProductHomeGrid(screenSize: screenSize),
+                  ],
+                ),
               ),
             ),
           ],
