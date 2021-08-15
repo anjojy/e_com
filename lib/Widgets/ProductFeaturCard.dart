@@ -15,7 +15,7 @@ class ProductFeaturCard extends StatelessWidget {
         Icon(
           icon,
           color: Colors.black54,
-          size: 45,
+          size: 40,
         ),
         Text(
           name,

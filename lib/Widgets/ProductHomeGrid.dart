@@ -14,7 +14,7 @@ class ProductHomeGrid extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       color: Colors.white,
-      margin: EdgeInsets.symmetric(vertical: 10, horizontal: 10),
+      margin: EdgeInsets.symmetric(vertical: 10, horizontal: 5),
       height: screenSize.height * 0.8,
       child: Column(
         children: <Widget>[
