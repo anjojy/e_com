@@ -1,5 +1,4 @@
 import 'package:e_com/screens/HomePage.dart';
-import 'package:e_com/screens/ProductDetailPage.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -14,7 +13,7 @@ class OmanPhones extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.red,
       ),
-      home: ProductDetailPage(),
+      home: HomePage(),
     );
   }
 }

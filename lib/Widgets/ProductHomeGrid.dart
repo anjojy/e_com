@@ -1,3 +1,4 @@
+import 'package:e_com/screens/ProductDetailPage.dart';
 import 'package:flutter/material.dart';
 
 import 'ProductCard.dart';
@@ -6,9 +7,13 @@ class ProductHomeGrid extends StatelessWidget {
   const ProductHomeGrid({
     Key? key,
     required this.screenSize,
+    required this.title,
+    required this.isVisible,
   }) : super(key: key);
 
   final Size screenSize;
+  final String title;
+  final bool isVisible;
 
   @override
   Widget build(BuildContext context) {
@@ -24,24 +29,30 @@ class ProductHomeGrid extends StatelessWidget {
                 width: 5,
               ),
               Text(
-                'Mobile Phones',
+                title,
                 style: TextStyle(
                     fontSize: 16,
                     fontWeight: FontWeight.bold,
                     color: Colors.black),
               ),
               Expanded(child: SizedBox()),
-              TextButton(
-                  style: ButtonStyle(
-                      backgroundColor: MaterialStateProperty.all(Colors.red)),
-                  onPressed: () {},
-                  child: Text(
-                    'VIEW ALL',
-                    style: TextStyle(
-                        color: Colors.white, fontWeight: FontWeight.w700),
-                  )),
+              isVisible
+                  ? TextButton(
+                      style: ButtonStyle(
+                          backgroundColor:
+                              MaterialStateProperty.all(Colors.red)),
+                      onPressed: () {},
+                      child: Text(
+                        'VIEW ALL',
+                        style: TextStyle(
+                            color: Colors.white, fontWeight: FontWeight.w700),
+                      ))
+                  : SizedBox(
+                      width: 5,
+                    ),
               SizedBox(
                 width: 5,
+                height: 50,
               ),
             ],
           ),
@@ -51,13 +62,25 @@ class ProductHomeGrid extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    ProductCard(screenSize: screenSize),
+                    ProductCard(
+                      screenSize: screenSize,
+                      onTap: () => Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => ProductDetailPage())),
+                    ),
                     Container(
                       height: screenSize.height * 0.35,
                       width: 2,
                       color: Colors.grey[350],
                     ),
-                    ProductCard(screenSize: screenSize),
+                    ProductCard(
+                      screenSize: screenSize,
+                      onTap: () => Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => ProductDetailPage())),
+                    ),
                   ],
                 ),
                 Container(
@@ -68,13 +91,25 @@ class ProductHomeGrid extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    ProductCard(screenSize: screenSize),
+                    ProductCard(
+                      screenSize: screenSize,
+                      onTap: () => Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => ProductDetailPage())),
+                    ),
                     Container(
                       height: screenSize.height * 0.35,
                       width: 2,
                       color: Colors.grey[350],
                     ),
-                    ProductCard(screenSize: screenSize),
+                    ProductCard(
+                      screenSize: screenSize,
+                      onTap: () => Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => ProductDetailPage())),
+                    ),
                   ],
                 ),
               ],

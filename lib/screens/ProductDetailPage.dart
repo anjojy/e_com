@@ -41,42 +41,60 @@ class _ProductDetailPageState extends State<ProductDetailPage> {
     Size screenSize = MediaQuery.of(context).size;
     return Scaffold(
         backgroundColor: Colors.grey[200],
-        appBar: AppBar(),
-        body: SingleChildScrollView(
-          child:
-              Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-            Container(
-              color: Colors.white,
-              child: Column(
-                children: [
-                  SizedBox(
-                    height: 10,
+        appBar: AppBar(actions: [
+          Icon(Icons.search_outlined, size: 25),
+          SizedBox(width: 10),
+          Icon(Icons.shopping_cart_outlined, size: 25),
+          SizedBox(width: 10),
+        ]),
+        body: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisAlignment: MainAxisAlignment.end,
+            children: [
+              Expanded(
+                child: SingleChildScrollView(
+                  child: Column(
+                    children: [
+                      Container(
+                        color: Colors.white,
+                        child: Column(
+                          children: [
+                            SizedBox(
+                              height: 10,
+                            ),
+                            Container(
+                                height: screenSize.height * 0.5,
+                                child: PageView.builder(
+                                    scrollDirection: Axis.horizontal,
+                                    onPageChanged: _onchanged,
+                                    controller: _controller,
+                                    itemCount: _pages.length,
+                                    itemBuilder: (context, int index) {
+                                      return _pages[index];
+                                    })),
+                            SizedBox(
+                              height: 10,
+                            ),
+                            CarouselIndicator(
+                                pages: _pages, currentImage: _currentImage),
+                            SizedBox(
+                              height: 10,
+                            ),
+                          ],
+                        ),
+                      ),
+                      ProductDetailTop(screenSize: screenSize),
+                      ProductDetailBar(screenSize),
+                      ProductHomeGrid(
+                        screenSize: screenSize,
+                        isVisible: false,
+                        title: 'Similar Products',
+                      ),
+                    ],
                   ),
-                  Container(
-                      height: screenSize.height * 0.5,
-                      child: PageView.builder(
-                          scrollDirection: Axis.horizontal,
-                          onPageChanged: _onchanged,
-                          controller: _controller,
-                          itemCount: _pages.length,
-                          itemBuilder: (context, int index) {
-                            return _pages[index];
-                          })),
-                  SizedBox(
-                    height: 10,
-                  ),
-                  CarouselIndicator(pages: _pages, currentImage: _currentImage),
-                  SizedBox(
-                    height: 10,
-                  ),
-                ],
+                ),
               ),
-            ),
-            ProductDetailTop(screenSize: screenSize),
-            ProductDetailBar(screenSize),
-            ProductHomeGrid(screenSize: screenSize),
-            AddCartButton()
-          ]),
-        ));
+              AddCartButton()
+            ]));
   }
 }
