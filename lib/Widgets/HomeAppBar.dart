@@ -1,8 +1,10 @@
+import 'package:e_com/Styles/ConstText.dart';
 import 'package:flutter/material.dart';
 
+//Home Page App Bar
 AppBar HomeAppBar() {
   return AppBar(
-      title: Text('OMAN PHONE'),
+      title: Text(StaticText.homeAppBarTitle),
       centerTitle: true,
       elevation: 0,
       leading: Icon(

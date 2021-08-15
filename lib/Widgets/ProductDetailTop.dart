@@ -1,3 +1,4 @@
+import 'package:e_com/Styles/ConstText.dart';
 import 'package:e_com/Widgets/ProductFeaturCard.dart';
 import 'package:flutter/material.dart';
 
@@ -20,15 +21,13 @@ class ProductDetailTop extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              "Apple iphone 12 pro (pacific blue 128gb)",
+              StaticText.productDummyName,
               style: TextStyle(
                   fontWeight: FontWeight.bold,
                   fontSize: 18,
                   color: Colors.black54),
             ),
-            SizedBox(
-              height: 10,
-            ),
+            SizedBox(height: 10),
             Container(
                 decoration: BoxDecoration(
                     color: Colors.amber,

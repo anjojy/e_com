@@ -1,6 +1,8 @@
+import 'package:e_com/Styles/ConstText.dart';
 import 'package:e_com/screens/CartPage.dart';
 import 'package:flutter/material.dart';
 
+//Add Cart Button in Product Detail Page
 class AddCartButton extends StatelessWidget {
   const AddCartButton({
     Key? key,
@@ -12,7 +14,7 @@ class AddCartButton extends StatelessWidget {
       height: 50,
       width: double.maxFinite,
       child: TextButton(
-        child: Text('ADD TO CART'),
+        child: Text(StaticText.cartBtnLabel),
         style: TextButton.styleFrom(
           primary: Colors.white,
           shape: const BeveledRectangleBorder(
@@ -21,6 +23,7 @@ class AddCartButton extends StatelessWidget {
           onSurface: Colors.grey,
         ),
         onPressed: () {
+          //Navigate to Cart page
           Navigator.push(
               context, MaterialPageRoute(builder: (context) => CartPage()));
         },

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+//Cart counter for set number of products
 class CartCounter extends StatefulWidget {
   @override
   _CartCounterState createState() => _CartCounterState();
@@ -48,14 +49,9 @@ class _CartCounterState extends State<CartCounter> {
       child: OutlineButton(
         padding: EdgeInsets.zero,
         color: Colors.amber,
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(13),
-        ),
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(13)),
         onPressed: () => {press()},
-        child: Icon(
-          icon,
-          size: 16,
-        ),
+        child: Icon(icon, size: 16),
       ),
     );
   }

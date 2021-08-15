@@ -1,3 +1,4 @@
+import 'package:e_com/Styles/ConstText.dart';
 import 'package:e_com/Widgets/AddCartButton.dart';
 import 'package:e_com/Widgets/CarouselIndicator.dart';
 import 'package:e_com/Widgets/CarouselViews.dart';
@@ -59,9 +60,7 @@ class _ProductDetailPageState extends State<ProductDetailPage> {
                         color: Colors.white,
                         child: Column(
                           children: [
-                            SizedBox(
-                              height: 10,
-                            ),
+                            SizedBox(height: 10),
                             Container(
                                 height: screenSize.height * 0.5,
                                 child: PageView.builder(
@@ -72,14 +71,10 @@ class _ProductDetailPageState extends State<ProductDetailPage> {
                                     itemBuilder: (context, int index) {
                                       return _pages[index];
                                     })),
-                            SizedBox(
-                              height: 10,
-                            ),
+                            SizedBox(height: 10),
                             CarouselIndicator(
                                 pages: _pages, currentImage: _currentImage),
-                            SizedBox(
-                              height: 10,
-                            ),
+                            SizedBox(height: 10),
                           ],
                         ),
                       ),
@@ -88,7 +83,7 @@ class _ProductDetailPageState extends State<ProductDetailPage> {
                       ProductHomeGrid(
                         screenSize: screenSize,
                         isVisible: false,
-                        title: 'Similar Products',
+                        title: StaticText.similarProducts,
                       ),
                     ],
                   ),

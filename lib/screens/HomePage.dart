@@ -1,3 +1,4 @@
+import 'package:e_com/Styles/ConstText.dart';
 import 'package:e_com/Widgets/AdBaner.dart';
 import 'package:e_com/Widgets/HomeAppBar.dart';
 import 'package:e_com/Widgets/ProductHomeGrid.dart';
@@ -59,13 +60,13 @@ class _MyHomePageState extends State<HomePage> {
                     AdBaner(screenSize),
                     ProductHomeGrid(
                       screenSize: screenSize,
-                      title: 'Mobile Phones',
+                      title: StaticText.homeProductslabel,
                       isVisible: true,
                     ),
                     AdBaner2(screenSize),
                     ProductHomeGrid(
                       screenSize: screenSize,
-                      title: 'New Arrivals',
+                      title: StaticText.homeNewProducts,
                       isVisible: true,
                     ),
                   ],
