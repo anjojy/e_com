@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+//The Carousel view Indicators
 class CarouselIndicator extends StatelessWidget {
   const CarouselIndicator({
     Key? key,

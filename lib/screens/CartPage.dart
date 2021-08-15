@@ -1,3 +1,5 @@
+import 'package:e_com/Styles/ConstText.dart';
+import 'package:e_com/Styles/ConstTextStyle.dart';
 import 'package:e_com/Widgets/CartCounter.dart';
 import 'package:flutter/material.dart';
 
@@ -31,26 +33,18 @@ class _CartPageState extends State<CartPage> {
                         child: Column(
                           children: [
                             Text(
-                              "Apple iphone 12 pro (pacific blue 128gb)",
+                              StaticText.productDummyName,
                               softWrap: true,
-                              style: TextStyle(
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: 16,
-                                  color: Colors.black54),
+                              style: ProductLabelStyle,
                             ),
                             Expanded(child: SizedBox()),
                             Row(
                               children: [
-                                Text('OMR 90.000',
-                                    style: TextStyle(
-                                        fontWeight: FontWeight.bold,
-                                        color: Colors.red,
-                                        fontSize: 18)),
+                                Text(StaticText.productDummyPrice,
+                                    style: ProductPriceLabelStyle),
                                 Expanded(child: SizedBox()),
                                 Icon(Icons.delete_outline),
-                                SizedBox(
-                                  width: 30,
-                                ),
+                                SizedBox(width: 30),
                               ],
                             ),
                           ],
@@ -62,12 +56,9 @@ class _CartPageState extends State<CartPage> {
                         children: [
                           Container(
                             height: screenSize.height * 0.14,
-                            child: Image.network(
-                                'https://fdn2.gsmarena.com/vv/pics/apple/apple-iphone-12-r1.jpg'),
+                            child: Image.network(StaticText.productDummyImage),
                           ),
-                          SizedBox(
-                            height: 20,
-                          ),
+                          SizedBox(height: 20),
                           CartCounter(),
                         ],
                       )

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+//Carousel Image scrolling Widget
 class CarouselImage extends StatelessWidget {
   final String image;
 

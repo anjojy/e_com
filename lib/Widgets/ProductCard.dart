@@ -1,5 +1,8 @@
+import 'package:e_com/Styles/ConstText.dart';
+import 'package:e_com/Styles/ConstTextStyle.dart';
 import 'package:flutter/material.dart';
 
+//Product List Grid Card Item View
 class ProductCard extends StatelessWidget {
   const ProductCard({
     Key? key,
@@ -19,31 +22,21 @@ class ProductCard extends StatelessWidget {
           width: screenSize.width * 0.45,
           child: Column(
             children: [
-              SizedBox(
-                height: 10,
-              ),
+              SizedBox(height: 10),
               Image.network(
-                'https://fdn2.gsmarena.com/vv/pics/apple/apple-iphone-12-r1.jpg',
+                StaticText.productDummyImage,
                 height: screenSize.height * 0.20,
               ),
-              SizedBox(
-                height: 10,
-              ),
+              SizedBox(height: 10),
               Text(
-                "Apple iphone 12 pro (pacific blue 128gb)",
+                StaticText.productDummyName,
                 textAlign: TextAlign.center,
-                style: TextStyle(
-                    fontSize: 15,
-                    fontWeight: FontWeight.w600,
-                    color: Colors.black54),
+                style: ProductCardNameStyle,
               ),
-              SizedBox(
-                height: 10,
-              ),
+              SizedBox(height: 10),
               Text(
-                'OMR 90.000',
-                style:
-                    TextStyle(fontWeight: FontWeight.bold, color: Colors.red),
+                StaticText.productDummyPrice,
+                style: ProductCardPriceStyle,
               ),
             ],
           )),

@@ -1,12 +1,14 @@
+import 'package:e_com/Styles/ConstText.dart';
 import 'package:flutter/material.dart';
 
+//Ad Banners in Home Page
 Container AdBaner(Size screenSize) {
   return Container(
     height: screenSize.height * 0.25,
     width: screenSize.width,
     color: Colors.grey[100],
     child: Image.network(
-      'https://www.cellcity.co.bw/sites/default/files/styles/main_image/public/2021-02/Iphone%2012%20website%20Banners%202020-2%20%282%29.jpg?itok=SM9AD0EV',
+      StaticText.adBanner1,
       fit: BoxFit.fill,
     ),
   );
@@ -18,7 +20,7 @@ Container AdBaner2(Size screenSize) {
     width: screenSize.width,
     color: Colors.grey[100],
     child: Image.network(
-      'https://www.giveawaymonkey.com/wp-content/uploads/2020/11/sup_giveawaybanner_iphone12_gleam2.jpg',
+      StaticText.adBanner2,
       fit: BoxFit.fill,
     ),
   );

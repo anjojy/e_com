@@ -1,12 +1,11 @@
+import 'package:e_com/Styles/ConstText.dart';
+import 'package:e_com/Styles/ConstTextStyle.dart';
 import 'package:flutter/material.dart';
 
+//Product basic detail view in Product detail Page
 Container ProductDetailBar(Size screenSize) {
   return Container(
-    margin: EdgeInsets.only(
-      left: 5,
-      right: 5,
-      bottom: 10,
-    ),
+    margin: EdgeInsets.only(left: 5, right: 5, bottom: 10),
     padding: EdgeInsets.all(10),
     height: screenSize.height * 0.16,
     color: Colors.white,
@@ -14,20 +13,12 @@ Container ProductDetailBar(Size screenSize) {
       crossAxisAlignment: CrossAxisAlignment.start,
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        Text(
-          'About Product',
-          style: TextStyle(
-              color: Colors.black, fontSize: 18, fontWeight: FontWeight.bold),
-        ),
+        Text(StaticText.aboutProductLabel, style: aboutProductStyle),
         Expanded(child: SizedBox()),
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text(
-              'View details...',
-              style: TextStyle(
-                  color: Colors.red, fontSize: 18, fontWeight: FontWeight.w500),
-            ),
+            Text(StaticText.viewDetailsLabel, style: viewDetailsProductStyle),
           ],
         ),
         Expanded(child: SizedBox()),
