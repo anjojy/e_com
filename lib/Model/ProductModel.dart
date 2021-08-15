@@ -19,16 +19,16 @@ class ProductDetails {
 List<ProductDetails> productsList = [
   ProductDetails(
       id: 1,
-      name: "",
-      storage: "",
+      name: "IPhone 8",
+      storage: "32",
       starrateing: 3.4,
       price: 234,
       image: "https://fdn2.gsmarena.com/vv/pics/apple/apple-iphone-12-r1.jpg",
       color: Color(0xFF3D82AE)),
   ProductDetails(
       id: 2,
-      name: "",
-      storage: "",
+      name: "IPhone XR",
+      storage: "64",
       starrateing: 4.5,
       price: 234,
       image:
@@ -36,8 +36,8 @@ List<ProductDetails> productsList = [
       color: Color(0xFFD3A984)),
   ProductDetails(
       id: 3,
-      name: "",
-      storage: "",
+      name: "IPhone 11 Pro",
+      storage: "128",
       starrateing: 4.7,
       price: 234,
       image:
@@ -45,8 +45,8 @@ List<ProductDetails> productsList = [
       color: Color(0xFF989493)),
   ProductDetails(
       id: 4,
-      name: "",
-      storage: "",
+      name: "IPhone 12 pro Max",
+      storage: "68",
       starrateing: 3.2,
       price: 234,
       image:
