@@ -11,7 +11,7 @@ class StaticText {
   static String adBanner1 =
       "https://www.cellcity.co.bw/sites/default/files/styles/main_image/public/2021-02/Iphone%2012%20website%20Banners%202020-2%20%282%29.jpg?itok=SM9AD0EV";
   static String adBanner2 =
-      "https://www.giveawaymonkey.com/wp-content/uploads/2020/11/sup_giveawaybanner_iphone12_gleam2.jpg";
+      "http://omanphone.smsoman.com//mobile-admin//uploads//image_60b787d5beb55.png";
   static String cartBtnLabel = "ADD TO CART";
   static String homeAppBarTitle = "OMAN PHONE";
   static String aboutProductLabel = "About Product";

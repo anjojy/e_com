@@ -4,22 +4,23 @@ class ProductFeaturCard extends StatelessWidget {
   const ProductFeaturCard({
     Key? key,
     required this.name,
-    required this.icon,
+    required this.iconimg,
   }) : super(key: key);
   final String name;
-  final IconData icon;
+
+  final String iconimg;
   @override
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Icon(
-          icon,
-          color: Colors.black54,
-          size: 40,
+        Container(height: 40, width: 40, child: Image.network(iconimg)),
+        SizedBox(
+          height: 3,
         ),
         Text(
           name,
-          style: TextStyle(fontSize: 14, fontWeight: FontWeight.w500),
+          style: TextStyle(
+              fontSize: 14, fontWeight: FontWeight.w500, color: Colors.black54),
         )
       ],
     );

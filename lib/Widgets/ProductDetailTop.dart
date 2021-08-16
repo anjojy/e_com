@@ -93,12 +93,14 @@ class ProductDetailTop extends StatelessWidget {
                           width: 20,
                         ),
                         Container(
-                            height: 20,
-                            width: 20,
-                            decoration: new BoxDecoration(
-                              color: Colors.black,
-                              shape: BoxShape.circle,
-                            ))
+                          height: 30,
+                          width: 30,
+                          decoration: new BoxDecoration(
+                            shape: BoxShape.circle,
+                          ),
+                          child: Image.network(
+                              'http://omanphone.smsoman.com//pub//media//attribute//swatch////b//l//blue.png'),
+                        )
                       ])),
                   Column(children: [
                     SizedBox(height: 20),
@@ -106,17 +108,23 @@ class ProductDetailTop extends StatelessWidget {
                       SizedBox(width: 30),
                       ProductFeaturCard(
                         name: "128 GB",
-                        icon: Icons.memory_outlined,
+                        iconimg:
+                            'http:\/\/omanphone.smsoman.com\/pub\/media\/itoons\/Rom_Omanphone.png',
+                        //icon: Icons.memory_outlined,
                       ),
                       Expanded(child: SizedBox()),
                       ProductFeaturCard(
                         name: "5000 mAh",
-                        icon: Icons.battery_charging_full_outlined,
+                        iconimg:
+                            'http:\/\/omanphone.smsoman.com\/pub\/media\/itoons\/Battery_Omanphone.png',
+                        //icon: Icons.battery_charging_full_outlined,
                       ),
                       Expanded(child: SizedBox()),
                       ProductFeaturCard(
                         name: "20 MP",
-                        icon: Icons.camera_outlined,
+                        iconimg:
+                            'http:\/\/omanphone.smsoman.com\/pub\/media\/itoons\/Shutter_Omanphone.png',
+                        //icon: Icons.camera_outlined,
                       ),
                       SizedBox(width: 30)
                     ]),
@@ -125,12 +133,16 @@ class ProductDetailTop extends StatelessWidget {
                       SizedBox(width: 30),
                       ProductFeaturCard(
                         name: "8 GB",
-                        icon: Icons.storage_sharp,
+                        iconimg:
+                            'http:\/\/omanphone.smsoman.com\/pub\/media\/itoons\/Ram_Omanphone.png',
+                        //icon: Icons.storage_sharp,
                       ),
                       Expanded(child: SizedBox()),
                       ProductFeaturCard(
                         name: "6.1 ",
-                        icon: Icons.mobile_friendly_outlined,
+                        iconimg:
+                            'http:\/\/omanphone.smsoman.com\/pub\/media\/itoons\/Screen_Omanphone.png',
+                        //icon: Icons.mobile_friendly_outlined,
                       ),
                       Expanded(child: SizedBox()),
                       SizedBox(width: 80)
