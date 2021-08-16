@@ -9,7 +9,6 @@ class OmanPhones extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'OMAN PHONE',
       theme: ThemeData(
         primarySwatch: Colors.red,
       ),
