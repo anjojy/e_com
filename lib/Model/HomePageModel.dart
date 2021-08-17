@@ -1,30 +1,34 @@
 import 'dart:convert';
 
-List<HomeProductModel> productFromJson(String str) =>
+List<HomeProductModel> HomeProductsFromJson(String str) =>
     List<HomeProductModel>.from(
         json.decode(str).map((x) => HomeProductModel.fromJson(x)));
 
-String welcomeToJson(List<HomeProductModel> data) =>
+String HomeProductsFromJsonToJson(List<HomeProductModel> data) =>
     json.encode(List<dynamic>.from(data.map((x) => x.toJson())));
 
 class HomeProductModel {
   HomeProductModel({
     required this.type,
     required this.data,
+    required this.subtype,
   });
 
-  String type;
+  String? type;
   Data data;
+  String? subtype;
 
   factory HomeProductModel.fromJson(Map<String, dynamic> json) =>
       HomeProductModel(
         type: json["type"],
         data: Data.fromJson(json["data"]),
+        subtype: json["subtype"] == null ? null : json["subtype"],
       );
 
   Map<String, dynamic> toJson() => {
         "type": type,
         "data": data.toJson(),
+        "subtype": subtype == null ? null : subtype,
       };
 }
 
@@ -33,16 +37,22 @@ class Data {
     required this.id,
     required this.title,
     required this.items,
+    required this.type,
+    required this.file,
   });
 
-  String id;
-  String title;
+  String? id;
+  String? title;
   List<Item> items;
+  String? type;
+  String? file;
 
   factory Data.fromJson(Map<String, dynamic> json) => Data(
         id: json["id"],
         title: json["title"] == null ? null : json["title"],
         items: List<Item>.from(json["items"].map((x) => Item.fromJson(x))),
+        type: json["type"] == null ? null : json["type"],
+        file: json["file"] == null ? null : json["file"],
       );
 
   Map<String, dynamic> toJson() => {
@@ -51,6 +61,8 @@ class Data {
         "items": items == null
             ? null
             : List<dynamic>.from(items.map((x) => x.toJson())),
+        "type": type == null ? null : type,
+        "file": file == null ? null : file,
       };
 }
 
@@ -68,16 +80,16 @@ class Item {
     required this.preorder,
   });
 
-  String name;
-  String id;
-  String sku;
-  String image;
-  double price;
-  int specialPrice;
-  String rating;
+  String? name;
+  String? id;
+  String? sku;
+  String? image;
+  double? price;
+  int? specialPrice;
+  String? rating;
   dynamic storage;
-  String productTag;
-  String preorder;
+  String? productTag;
+  String? preorder;
 
   factory Item.fromJson(Map<String, dynamic> json) => Item(
         name: json["name"],

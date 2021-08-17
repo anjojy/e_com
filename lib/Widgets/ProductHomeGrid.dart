@@ -1,10 +1,13 @@
+import 'package:e_com/Controller/HomePageController.dart';
 import 'package:e_com/screens/ProductDetailPage.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 import 'ProductCard.dart';
 
 class ProductHomeGrid extends StatelessWidget {
-  const ProductHomeGrid({
+  final ProductController productController = Get.put(ProductController());
+  ProductHomeGrid({
     Key? key,
     required this.screenSize,
     required this.title,
