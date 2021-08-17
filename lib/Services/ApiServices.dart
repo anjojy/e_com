@@ -1,16 +1,19 @@
-import 'dart:convert';
-
+import 'package:e_com/Model/HomePageModel.dart';
 import 'package:http/http.dart' as http;
 
-class APIServices {
-  static getProductDetails() async {
-    var response = await http
-        .get(Uri.https('omanphone.smsoman.com', '/api/productdetails?id=5'));
+class RemoteServices {
+  static var client = http.Client();
+
+  static Future<List<HomeProductModel>?> fetchProducts() async {
+    var response = await client
+        .get(Uri.parse('http://omanphone.smsoman.com/api/homepage'));
     if (response.statusCode == 200) {
-      var productData = jsonDecode(response.body);
-      print(productData);
+      var jsonString = response.body;
+      print(jsonString);
+      return HomeProductsFromJson(jsonString);
     } else {
-      print(response.statusCode);
+      //show error message
+      return null;
     }
   }
 }
