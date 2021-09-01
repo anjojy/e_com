@@ -1,4 +1,4 @@
-import 'package:e_com/Styles/ConstText.dart';
+import 'package:e_com/styles/ConstText.dart';
 import 'package:flutter/material.dart';
 
 //Home Page App Bar

@@ -1,11 +1,12 @@
-import 'package:e_com/Styles/ConstText.dart';
-import 'package:e_com/Widgets/ProductFeaturCard.dart';
+import 'package:e_com/styles/ConstText.dart';
 import 'package:flutter/material.dart';
+
+import 'ProductFeaturCard.dart';
 
 class ProductDetailTop extends StatelessWidget {
   const ProductDetailTop({
-    Key? key,
-    required this.screenSize,
+    key,
+    this.screenSize,
   }) : super(key: key);
 
   final Size screenSize;

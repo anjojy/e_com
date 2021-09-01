@@ -1,16 +1,21 @@
-import 'package:e_com/Styles/ConstText.dart';
-import 'package:e_com/Styles/ConstTextStyle.dart';
+import 'package:e_com/styles/ConstTextStyle.dart';
 import 'package:flutter/material.dart';
 
 //Product List Grid Card Item View
 class ProductCard extends StatelessWidget {
   const ProductCard({
-    Key? key,
-    required this.screenSize,
-    required this.onTap,
+    key,
+    this.screenSize,
+    this.price,
+    this.name,
+    this.image,
+    this.onTap,
   }) : super(key: key);
 
   final Size screenSize;
+  final String name;
+  final String image;
+  final String price;
   final Function onTap;
 
   @override
@@ -23,21 +28,25 @@ class ProductCard extends StatelessWidget {
           child: Column(
             children: [
               SizedBox(height: 10),
-              Image.network(
-                StaticText.productDummyImage,
-                height: screenSize.height * 0.20,
+              Container(
+                height: screenSize.height * 0.2,
+                child: Image.network(
+                  image,
+                  height: screenSize.height * 0.20,
+                ),
               ),
               SizedBox(height: 10),
               Text(
-                StaticText.productDummyName,
+                name,
                 textAlign: TextAlign.center,
                 style: ProductCardNameStyle,
               ),
-              SizedBox(height: 10),
+              Expanded(child: SizedBox()),
               Text(
-                StaticText.productDummyPrice,
+                "OMR $price",
                 style: ProductCardPriceStyle,
               ),
+              SizedBox(height: 10),
             ],
           )),
     );

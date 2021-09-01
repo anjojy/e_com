@@ -3,9 +3,9 @@ import 'package:flutter/material.dart';
 //The Carousel view Indicators
 class CarouselIndicator extends StatelessWidget {
   const CarouselIndicator({
-    Key? key,
-    required List<Widget> pages,
-    required int currentImage,
+    key,
+    List<Widget> pages,
+    int currentImage,
   })  : _pages = pages,
         _currentImage = currentImage,
         super(key: key);

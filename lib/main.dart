@@ -1,18 +1,21 @@
-import 'package:e_com/screens/HomePage.dart';
 import 'package:flutter/material.dart';
 
+import 'views/demo_page.dart';
+
 void main() {
-  runApp(OmanPhones());
+  runApp(MyApp());
 }
 
-class OmanPhones extends StatelessWidget {
+class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData(
         primarySwatch: Colors.red,
+        visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: HomePage(),
+      debugShowCheckedModeBanner: false,
+      home: demoPage(),
     );
   }
 }

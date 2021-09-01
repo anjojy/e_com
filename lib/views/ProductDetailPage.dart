@@ -1,14 +1,14 @@
-import 'package:e_com/Styles/ConstText.dart';
-import 'package:e_com/Widgets/AddCartButton.dart';
-import 'package:e_com/Widgets/CarouselIndicator.dart';
-import 'package:e_com/Widgets/CarouselViews.dart';
-import 'package:e_com/Widgets/ProductDetailBar.dart';
-import 'package:e_com/Widgets/ProductDetailTop.dart';
-import 'package:e_com/Widgets/ProductHomeGrid.dart';
+import 'package:e_com/componets/AddCartButton.dart';
+import 'package:e_com/componets/CarouselIndicator.dart';
+import 'package:e_com/componets/CarouselViews.dart';
+import 'package:e_com/componets/ProductDetailBar.dart';
+import 'package:e_com/componets/ProductDetailTop.dart';
+import 'package:e_com/componets/ProductHomeGrid.dart';
+import 'package:e_com/styles/ConstText.dart';
 import 'package:flutter/material.dart';
 
 class ProductDetailPage extends StatefulWidget {
-  const ProductDetailPage({Key? key}) : super(key: key);
+  const ProductDetailPage({key}) : super(key: key);
 
   @override
   _ProductDetailPageState createState() => _ProductDetailPageState();

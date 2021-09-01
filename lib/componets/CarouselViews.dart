@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 class CarouselImage extends StatelessWidget {
   final String image;
 
-  CarouselImage({required this.image});
+  CarouselImage({this.image});
 
   @override
   Widget build(BuildContext context) {

@@ -1,10 +1,10 @@
-import 'package:e_com/Styles/ConstText.dart';
-import 'package:e_com/Styles/ConstTextStyle.dart';
-import 'package:e_com/Widgets/CartCounter.dart';
+import 'package:e_com/componets/CartCounter.dart';
+import 'package:e_com/styles/ConstText.dart';
+import 'package:e_com/styles/ConstTextStyle.dart';
 import 'package:flutter/material.dart';
 
 class CartPage extends StatefulWidget {
-  const CartPage({Key? key}) : super(key: key);
+  const CartPage({key}) : super(key: key);
 
   @override
   _CartPageState createState() => _CartPageState();

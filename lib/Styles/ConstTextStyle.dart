@@ -21,6 +21,7 @@ const TextStyle ProductCardNameStyle = TextStyle(
 
 const TextStyle ProductCardPriceStyle = TextStyle(
   fontWeight: FontWeight.bold,
+  fontSize: 15,
   color: Colors.red,
 );
 

@@ -1,22 +1,22 @@
-import 'package:e_com/Controller/HomePageController.dart';
-import 'package:e_com/screens/ProductDetailPage.dart';
+import 'package:e_com/controllers/product_controller.dart';
+import 'package:e_com/styles/ConstText.dart';
+import 'package:e_com/views/ProductDetailPage.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-
 import 'ProductCard.dart';
 
 class ProductHomeGrid extends StatelessWidget {
-  final ProductController productController = Get.put(ProductController());
   ProductHomeGrid({
-    Key? key,
-    required this.screenSize,
-    required this.title,
-    required this.isVisible,
+    key,
+    this.screenSize,
+    this.title,
+    this.isVisible,
   }) : super(key: key);
 
   final Size screenSize;
   final String title;
   final bool isVisible;
+  final ProductController productController = Get.put(ProductController());
 
   @override
   Widget build(BuildContext context) {
@@ -67,6 +67,12 @@ class ProductHomeGrid extends StatelessWidget {
                   children: [
                     ProductCard(
                       screenSize: screenSize,
+                      price: productController
+                          .productList[0].data.items[0].price
+                          .toString(),
+                      image: StaticText.baseURL +
+                          productController.productList[0].data.items[0].image,
+                      name: productController.productList[0].data.items[0].name,
                       onTap: () => Navigator.push(
                           context,
                           MaterialPageRoute(
@@ -79,6 +85,12 @@ class ProductHomeGrid extends StatelessWidget {
                     ),
                     ProductCard(
                       screenSize: screenSize,
+                      price: productController
+                          .productList[0].data.items[1].price
+                          .toString(),
+                      image: StaticText.baseURL +
+                          productController.productList[0].data.items[1].image,
+                      name: productController.productList[0].data.items[1].name,
                       onTap: () => Navigator.push(
                           context,
                           MaterialPageRoute(
@@ -96,6 +108,12 @@ class ProductHomeGrid extends StatelessWidget {
                   children: [
                     ProductCard(
                       screenSize: screenSize,
+                      image: StaticText.baseURL +
+                          productController.productList[0].data.items[2].image,
+                      price: productController
+                          .productList[0].data.items[2].price
+                          .toString(),
+                      name: productController.productList[0].data.items[2].name,
                       onTap: () => Navigator.push(
                           context,
                           MaterialPageRoute(
@@ -108,6 +126,11 @@ class ProductHomeGrid extends StatelessWidget {
                     ),
                     ProductCard(
                       screenSize: screenSize,
+                      price: productController
+                          .productList[0].data.items[3].price
+                          .toString(),
+                      image: StaticText.productDummyImage,
+                      name: productController.productList[0].data.items[3].name,
                       onTap: () => Navigator.push(
                           context,
                           MaterialPageRoute(

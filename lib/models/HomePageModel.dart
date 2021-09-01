@@ -1,25 +1,23 @@
 import 'dart:convert';
 
-List<HomeProductModel> HomeProductsFromJson(String str) =>
-    List<HomeProductModel>.from(
-        json.decode(str).map((x) => HomeProductModel.fromJson(x)));
+List<HomePageModel> productsFromJson(String str) => List<HomePageModel>.from(
+    json.decode(str).map((x) => HomePageModel.fromJson(x)));
 
-String HomeProductsFromJsonToJson(List<HomeProductModel> data) =>
+String productsToJson(List<HomePageModel> data) =>
     json.encode(List<dynamic>.from(data.map((x) => x.toJson())));
 
-class HomeProductModel {
-  HomeProductModel({
-    required this.type,
-    required this.data,
-    required this.subtype,
+class HomePageModel {
+  HomePageModel({
+    this.type,
+    this.data,
+    this.subtype,
   });
 
-  String? type;
+  String type;
   Data data;
-  String? subtype;
+  String subtype;
 
-  factory HomeProductModel.fromJson(Map<String, dynamic> json) =>
-      HomeProductModel(
+  factory HomePageModel.fromJson(Map<String, dynamic> json) => HomePageModel(
         type: json["type"],
         data: Data.fromJson(json["data"]),
         subtype: json["subtype"] == null ? null : json["subtype"],
@@ -34,23 +32,25 @@ class HomeProductModel {
 
 class Data {
   Data({
-    required this.id,
-    required this.title,
-    required this.items,
-    required this.type,
-    required this.file,
+    this.id,
+    this.title,
+    this.items,
+    this.type,
+    this.file,
   });
 
-  String? id;
-  String? title;
+  String id;
+  String title;
   List<Item> items;
-  String? type;
-  String? file;
+  String type;
+  String file;
 
   factory Data.fromJson(Map<String, dynamic> json) => Data(
         id: json["id"],
         title: json["title"] == null ? null : json["title"],
-        items: List<Item>.from(json["items"].map((x) => Item.fromJson(x))),
+        items: json["items"] == null
+            ? null
+            : List<Item>.from(json["items"].map((x) => Item.fromJson(x))),
         type: json["type"] == null ? null : json["type"],
         file: json["file"] == null ? null : json["file"],
       );
@@ -68,28 +68,28 @@ class Data {
 
 class Item {
   Item({
-    required this.name,
-    required this.id,
-    required this.sku,
-    required this.image,
-    required this.price,
-    required this.specialPrice,
-    required this.rating,
+    this.name,
+    this.id,
+    this.sku,
+    this.image,
+    this.price,
+    this.specialPrice,
+    this.rating,
     this.storage,
-    required this.productTag,
-    required this.preorder,
+    this.productTag,
+    this.preorder,
   });
 
-  String? name;
-  String? id;
-  String? sku;
-  String? image;
-  double? price;
-  int? specialPrice;
-  String? rating;
+  String name;
+  String id;
+  String sku;
+  String image;
+  double price;
+  int specialPrice;
+  String rating;
   dynamic storage;
-  String? productTag;
-  String? preorder;
+  String productTag;
+  String preorder;
 
   factory Item.fromJson(Map<String, dynamic> json) => Item(
         name: json["name"],

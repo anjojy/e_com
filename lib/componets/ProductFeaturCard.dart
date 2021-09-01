@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 
 class ProductFeaturCard extends StatelessWidget {
   const ProductFeaturCard({
-    Key? key,
-    required this.name,
-    required this.iconimg,
+    key,
+    this.name,
+    this.iconimg,
   }) : super(key: key);
   final String name;
 

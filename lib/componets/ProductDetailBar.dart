@@ -1,5 +1,5 @@
-import 'package:e_com/Styles/ConstText.dart';
-import 'package:e_com/Styles/ConstTextStyle.dart';
+import 'package:e_com/styles/ConstText.dart';
+import 'package:e_com/styles/ConstTextStyle.dart';
 import 'package:flutter/material.dart';
 
 //Product basic detail view in Product detail Page
